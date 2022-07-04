@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="it1470.css">
+    <script src="myScript1.js"></script>
+  </head>
+  <body>
+
+    <h1 style=" font-family: Arial; ">Make your best sandwich</h1>
+
+    <table>
+      <tr>
+        <td>
+          <div class="tablerow">
+
+
+            <h2 class="headeer">Choose the bread</h2>
+            <ul class="list">
+              <li>
+
+                <input type="radio" id="WhiteBread" name="bread" value="WhiteBread" checked>
+                <label for="WhiteBread" class="letters">White bread sandwich</label>
+                <span class="prices">1.50&euro;</span>
+
+              </li>
+              <li>
+                <input type="radio" id="BlackBread" name="bread" value="BlackBread" >
+                <label for="BlackBread" class="letters">Black Bread sandwich</label>
+                <span class="prices">1.50&euro;</span>
+              </li>
+              <li>
+                <input type="radio" id="BriocheBread" name="bread" value="BriocheBread" >
+                <label for="BriocheBread" class="letters">Brioche Bread sandwich</label>
+                <span class="prices">1.80&euro;</span>
+              </li>
+              <li>
+                <input type="radio" id="PitaBread" name="bread" value="PitaBread" >
+                <label for="PitaBread" class="letters">Pita Bread sandwich</label>
+                <span class="prices">1.80&euro;</span>
+              </li>
+              <li>
+                <input type="radio" id="MultigrainBread" name="bread" value="MultigrainBread" >
+                <label for="MultigrainBread" class="letters">Multigrain Bread sandwich</label>
+                <span class="prices">2.00&euro;</span>
+              </li>
+
+            </ul>
+          </div>
+        </td>
+
+        <td>
+          <div class="tablerow" >
+            <h2 class="headeer">Choose the sauce</h2>
+              <select class="selectList" name="sauces" id="sauces" size="4">
+                  <option value="Bbq" onclick="myFunction()" >BBQ</option>
+                  <option value="Tzatziki" onclick="myFunction()" >Tzatziki</option>
+                  <option value="Chedar"  onclick="myFunction()">Chedar</option>
+                  <option value="LemonPepper" onclick="myFunction()" >LemonPepper</option>
+              </select>
+
+              <span class="prices">
+                <a id="BBQ" href="bbq sauce.jpg"></a>
+                <a id="TZATZIKI" href="tzatziki sauce.jpg"></a>
+                <a id="CHEDDAR" href="cheddar sauce.jpg"></a>
+                <a id="LEMON" href="lemon pepper sauce.jpg"></a>
+                <p><img class="resize" id="myImg" src="bbq sauce.jpg"></p>
+
+                <script type="text/javascript">
+
+
+                  function myFunction(){
+
+                    if (document.getElementById('sauces').selectedIndex == 0) {
+                      document.getElementById("myImg").src = "bbq sauce.jpg";
+
+                    }else if (document.getElementById('sauces').selectedIndex == 1) {
+                      document.getElementById("myImg").src = "tzatziki sauce.jpg";
+                    }else if (document.getElementById('sauces').selectedIndex == 2) {
+                      document.getElementById("myImg").src = "cheddar sauce.jpg";
+                    }else if (document.getElementById('sauces').selectedIndex == 3) {
+                      document.getElementById("myImg").src = "lemon pepper sauce.jpg";
+                    }
+                  }
+                </script>
+
+              </span>
+
+          </div>
+
+
+        </td>
+
+
+      </tr>
+      <br>
+      <tr>
+        <td>
+          <div class="tablerow">
+            <h2 class="headeer">Choose the sidedish</h2>
+            <ul class="list">
+              <li >
+                <input type="radio" id="GreenSalad" name="sides" value="GreenSalad" checked>
+                <label for="GreenSalad" class="letters" >Green Salad</label>
+                <span class="prices">1.00&euro;</span>
+              </li>
+              <li>
+                <input type="radio" id="Frenchfries" name="sides" value="Frenchfries" >
+                <label for="Frenchfries" class="letters">French fries</label>
+                <span class="prices">1.00&euro;</span>
+              </li>
+              <li>
+                <input type="radio" id="MashPotatoes" name="sides" value="MashPotatoes" >
+                <label for="MashPotatoes" class="letters">Mash Potatoes</label>
+                <span class="prices">1.20&euro;</span>
+
+              </li>
+              <li>
+                <input type="radio" id="MacAndCheese" name="sides" value="MacAndCheese" >
+                <label for="MacAndCheese" class="letters">Mac And Cheese</label>
+                <span class="prices">1.20&euro;</span>
+              </li>
+            </ul>
+
+          </div>
+        </td>
+      </tr>
+      <br>
+      <tr>
+        <td>
+          <div class="tablerow">
+            <h2 class="headeer">Choose the meat/meats</h2>
+            <ul class="list">
+              <li>
+                <input type="checkbox" id="Pork" name="meats" value="Pork" checked required>
+                <label for="Pork" class="letters"> Pork </label>
+                <span class="prices">1.5&euro;</span>
+              </li>
+              <li>
+                <input type="checkbox" id="Chicken" name="meats" value="Chicken">
+                <label for="Chicken" class="letters"> Chicken </label>
+                <span class="prices">1.5&euro;</span>
+
+              </li>
+              <li>
+                <input type="checkbox" id="Beef" name="meats" value="Beef">
+                <label for="Beef" class="letters"> Beef </label>
+                <span class="prices">1.5&euro;</span>
+              </li>
+
+            </ul>
+
+        </div>
+        </td>
+      </tr>
+      <br>
+      <tr>
+        <td>
+          <div class="tablerow">
+            <h2 class="headeer">Total Price</h2>
+            <ul class="list">
+              <input type="text" id="calcost" name="calcost">
+              <span class="prices">
+                <button type="button" onclick="costButton()">Calculate cost</button>
+              </span>
+            </ul>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+  </body>
+</html>

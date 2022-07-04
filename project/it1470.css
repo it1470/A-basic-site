@@ -1,0 +1,48 @@
+
+.prices{
+
+  float:  right;
+
+}
+.letters{
+  font-family: Arial;
+
+}
+
+.list{
+
+  width: 300px;
+  list-style-type: none;
+
+}
+.headeer{
+
+  font-family: sans-serif;
+  background-color: gray;
+  color: white;
+  border: 3px solid Black;
+  width: 350px;
+  float: left;
+  margin-left: 20px;
+  }
+
+.tablerow{
+
+  border: 2px solid Black;
+  width: 400px;
+}
+
+.selectList{
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+
+
+.resize {
+    width: 75px;
+    height: 75px;
+    padding-right: 50px;
+
+
+}
